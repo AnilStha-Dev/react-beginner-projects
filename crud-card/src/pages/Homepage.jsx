@@ -558,7 +558,7 @@ const Homepage = () => {
     }
   ];
   const [products,setProducts]=useState(initialProducts);
-  const [modal,setModal]=useState(false);
+  const [modal,setModal]=useState(false);//state to show or hide modal
   const [image, setImage]=useState("");
   const [title, setTitle]=useState("");
   const [description, setDescription]=useState("");
@@ -595,6 +595,7 @@ const Homepage = () => {
       description, 
     }
     
+    //pass the data on setProducts
     setProducts([data,...products]);
     setModal(false);
   }
@@ -634,6 +635,7 @@ const Homepage = () => {
     editFormHandler={editFormHandler}
     onChangeHandler={onChangeHandler}
     />
+    
     <button className='btn btn-primary mx-5 my-4' onClick={modelHandler}>Add Product</button>
     <div className='d-flex flex-wrap justify-content-evenly gap-4 bg-danger'>
    {products.map((prod)=>{
